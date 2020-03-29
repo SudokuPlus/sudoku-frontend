@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.scss";
+// import Canvas from "./canvas/Canvas";
+import Board from "./Board";
 
 function App() {
   return (
     <div className="App">
-      <h1>S U D O K U</h1>
+      <h1>Sudoku</h1>
+      <Board />
     </div>
   );
 }
