@@ -1,29 +1,71 @@
 .App {
   text-align: center;
-  .board {
+  .boardPageContainer{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: auto;
-    box-sizing: border-box;
-    width: 50vw;
-    height: 50vw;
-    .box {
-      border: 1px solid black;
-      width: 10%;
-      height: 10%;
+    .board {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin: auto;
-      .noteNumbers{
-        width:33%;
-        height:33%;
-        font-size: 80%;
+      justify-content: center;
+      margin-left: 5%;
+      box-sizing: border-box;
+      width: 50vw;
+      height: 50vw;
+      background-color: rgb(179, 198, 212);
+      padding:3rem;
+      border-radius: 10px;
+      .boxRows{
         display: flex;
-        align-content: center;
-        justify-content: center;
-        // visibility: hidden;
+        box-sizing: border-box;
+        width:100%;
+        .box {
+          box-sizing: border-box;
+          border: 1px solid black;
+          width: 11.1%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          background-color: white;
+
+          .noteNumbers{
+            width:33%;
+            height:33%;
+            font-size: 40%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            visibility: hidden;
+          }
+        }
+        .borderRight{
+          border-right: 3px solid black;
+        }
+        .borderLeft{
+          border-left: 3px solid black;
+        }
+        .borderTop{
+          border-top: 3px solid black;
+        }
+        .borderBottom{
+          border-bottom: 3px solid black;
+        }
+        .selectedBox{
+          border: 2px solid pink;
+        }
+      }
+    }
+    .numberValueButtonContainer{
+      width: 40vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      height:20vh;
+      .numberValueButtons{
+        width:33%;
+        height: 33%;
+        border-radius: 30px;
       }
     }
   }
