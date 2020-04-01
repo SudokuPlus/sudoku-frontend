@@ -105,8 +105,12 @@ export class Board extends Component {
       console.log(e.target.value)
       if (sudokuBoard[selectedBox[0]][selectedBox[1]] === 0) {
         let newBoard = board
-        newBoard[selectedBox[0]][selectedBox[1]] = parseInt(e.target.value)
-        console.log(newBoard)
+        if (newBoard[selectedBox[0]][selectedBox[1]] === parseInt(e.target.value)) {
+          newBoard[selectedBox[0]][selectedBox[1]] = ''
+        } else {
+          newBoard[selectedBox[0]][selectedBox[1]] = parseInt(e.target.value)
+        }
+        // console.log(newBoard)
         this.setState({
           board: newBoard
         })
